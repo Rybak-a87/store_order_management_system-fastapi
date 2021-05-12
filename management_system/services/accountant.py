@@ -30,6 +30,6 @@ class AccountantService:
     def get_orders(self, date_start: Optional[str] = None, date_end: Optional[str] = None) -> List[OrderListModel]:
         query = self.session.query(tables.OrderDB)
         if date_end and date_start:
-            query = query.first(and_(tables.OrderDB.create_data >= self.format_date(date_start), tables.OrderDB.create_data <= self.format_date(date_end)))
+            query = query.filter(and_(tables.OrderDB.create_order_date >= self.format_date(date_start), tables.OrderDB.create_order_date <= self.format_date(date_end)))
         orders = query.all()
         return orders

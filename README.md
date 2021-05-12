@@ -1,3 +1,6 @@
+## Приложение можно проверить на http://store-order-management-system.herokuapp.com/
+## Документация в endpoints - http://store-order-management-system.herokuapp.com/docs
+---
 > # Тестовое задание Python backend
 > Реализовать систему для управлением заказами в магазине техники. Представьте, что ваш клиент хочет автоматизировать свой бизнес в магазине техники, и вам нужно внедрить серверную часть для этой автоматизации.
 > 
@@ -33,12 +36,10 @@
 ---
 > ## Для выполнения задания было задействовано:
 > - FastAPI
-> - SQLAlchemy
+> - SQLAlchemy (SQLite)
 ---
 > ## Запуск приложения на локальном сервере
 > - установка необходимых пакетов
 >> pip install -r requirements.txt
 > - запуск приложения с консоли
 >> uvicorn management.app:app --reload
----
-> Документация в endpoints - /docs

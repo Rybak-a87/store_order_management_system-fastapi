@@ -20,7 +20,7 @@ def get_product_list(service: CashierService = Depends()):
     return service.get_products_list()
 
 
-@router.post("/create-order")
+@router.post("/create-order", response_model=OrderListModel)
 def create_order(
         product_data: CreateOrderModel,
         service: CashierService = Depends()

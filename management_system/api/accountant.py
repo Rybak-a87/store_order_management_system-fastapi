@@ -19,4 +19,12 @@ def get_order_list(
         date_end: Optional[str] = None,
         service: AccountantService = Depends()
 ):
+    """
+    ## Получение списка заказов с возможностью выбора промежутка времени (в формате <число>.<месяц>.<год>)
+    \f
+    :param date_start:
+    :param date_end:
+    :param service:
+    :return:
+    """
     return service.get_orders(date_start, date_end)

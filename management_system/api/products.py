@@ -10,9 +10,16 @@ router = APIRouter(
 )
 
 
-@router.post("/")
+@router.post("/", response_model=ProductListModel)
 def create_product(
         product_data: CreateProductModel,
         service: ProductService = Depends()
 ):
+    """
+    ## Добавить товар в базу данных
+    \f
+    :param product_data:
+    :param service:
+    :return:
+    """
     return service.create_product(product_data)

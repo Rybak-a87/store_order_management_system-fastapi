@@ -41,7 +41,7 @@ class CashierService:
         products = self.session.query(tables.ProductDB).all()
         return products
 
-    def create_order(self, product_id: int):
+    def create_order(self, product_id: int) -> tables.OrderDB:
         """создание заказа"""
         product = self._get_product(product_id)
         order = tables.OrderDB(
@@ -55,7 +55,7 @@ class CashierService:
 
     def get_list_order_completed(self) -> List[tables.OrderDB]:
         """возвращаеть заказы со статусом <выполненно>"""
-        orders = self.session.query(tables.OrderDB).filter_by(status_order="completed").all()
+        orders = self.session.query(tables.OrderDB).filter_by(status_order="completed", status_check=False).all()
         return orders
 
     def get_checks(self) -> List[tables.CheckDB]:
