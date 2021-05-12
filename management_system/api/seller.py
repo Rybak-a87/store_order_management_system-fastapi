@@ -7,7 +7,8 @@ from ..services.seller import SellerService
 
 
 router = APIRouter(
-    prefix="/seller"
+    prefix="/seller",
+    tags=["Продавец-консультант"]
 )
 
 

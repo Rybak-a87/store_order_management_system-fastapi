@@ -5,7 +5,8 @@ from ..models.cashier import ProductListModel
 from ..services.products import ProductService
 
 router = APIRouter(
-    prefix="/create-product"
+    prefix="/create-product",
+    tags=["Создание товара"]
 )
 
 

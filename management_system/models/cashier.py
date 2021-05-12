@@ -3,27 +3,21 @@ from decimal import Decimal
 
 from pydantic import BaseModel
 
+from . import BaseClassModel
 
-class ProductListModel(BaseModel):
-    id: int
+
+class ProductListModel(BaseClassModel):
     name: str
     price: Decimal
-    create_date: date
-
-    class Config:
-        orm_mode = True
+    create_product_date: date
 
 
-class OrderListModel(BaseModel):
-    id: int
+class OrderListModel(BaseClassModel):
     id_product: int
     name_product: str
     price_order: Decimal
     status_order: str
-    create_date: date
-
-    class Config:
-        orm_mode = True
+    create_order_date: date
 
 
 class CreateOrderModel(BaseModel):
@@ -34,12 +28,8 @@ class CreateCheckModel(BaseModel):
     order_id: int
 
 
-class CheckListModel(BaseModel):
-    id: int
+class CheckListModel(BaseClassModel):
     id_order: int
     name_product: str
     price_to_pay: Decimal
-    create_date: date
-
-    class Config:
-        orm_mode = True
+    create_check_date: date

@@ -47,7 +47,7 @@ class CashierService:
         order = tables.OrderDB(
             id_product=product.id,
             name_product=product.name,
-            price_order=self.__sale(product.price, product.create_date)
+            price_order=self.__sale(product.price, product.create_product_date)
         )
         self.session.add(order)
         self.session.commit()

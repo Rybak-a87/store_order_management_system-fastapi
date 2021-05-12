@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     server_host: str = "127.0.0.1"
     server_port: int = 8000
     # подключение базы данных
-    database_url: str = "sqlite:///./db.sqlite3"
+    database_url: str = "sqlite:///db.sqlite3"
 
 
 settings = Settings(

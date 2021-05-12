@@ -8,7 +8,8 @@ from ..services.accountant import AccountantService
 
 
 router = APIRouter(
-    prefix="/accountant"
+    prefix="/accountant",
+    tags=["Бухгалтер"]
 )
 
 
