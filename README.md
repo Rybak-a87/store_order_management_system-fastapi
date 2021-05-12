@@ -1,5 +1,5 @@
-## Приложение можно проверить на http://store-order-management-system.herokuapp.com/
-## Документация в endpoints - http://store-order-management-system.herokuapp.com/docs
+## Документация к endpoints (Swagger) - http://store-order-management-system.herokuapp.com/docs
+## Приложение выложено на <a href="http://store-order-management-system.herokuapp.com/">Heroku</a>
 ---
 > # Тестовое задание Python backend
 > Реализовать систему для управлением заказами в магазине техники. Представьте, что ваш клиент хочет автоматизировать свой бизнес в магазине техники, и вам нужно внедрить серверную часть для этой автоматизации.
