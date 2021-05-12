@@ -45,7 +45,7 @@ def create_check(
         service: CashierService = Depends()
 ):
     """
-    ## Генерация счета на выполненныйй заказ
+    ## Генерация счета на выполненный заказ
     """
     return service.create_check(order_data.order_id)
 
@@ -53,7 +53,7 @@ def create_check(
 @router.get("/checks", response_model=List[CheckListModel])
 def get_checks(service: CashierService = Depends()):
     """
-    ## Полугчение спичка открытых (не оплоченных) счетов
+    ## Получение спичка открытых (не оплаченных) счетов
     """
     return service.get_checks()
 
